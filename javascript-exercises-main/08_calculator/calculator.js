@@ -24,8 +24,13 @@ const power = function(a,b) {
  return array.reduce((pow,current)=>pow*current,1);
 };
 
-const factorial = function() {
-	
+const factorial = function(a) {
+  let arr = [];
+	for(let i=1;i<=a;i++){
+    arr.push(i);
+  }
+
+  return arr.reduce((fact,current)=>fact*current,1);
 };
 
 // Do not edit below this line

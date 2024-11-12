@@ -1,6 +1,10 @@
-const palindromes = function () {
-
+const palindromes = function (word) {
+    const cleanWord = word.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+    
+    const reversedWord = cleanWord.split('').reverse().join('');
+    return cleanWord === reversedWord;
 };
 
-// Do not edit below this line
+
 module.exports = palindromes;
