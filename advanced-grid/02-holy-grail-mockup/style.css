@@ -6,7 +6,7 @@
 .container {
   text-align: center;
   display: grid;
-  grid-template:  1fr 3fr 1fr/ 1fr 4fr;
+  grid-template:  1fr 1fr 3fr 1fr/ 1fr 4fr;
   gap: 4px;
 }
 
@@ -16,6 +16,7 @@
   font-family: Helvetica;
   font-weight: bold;
   color: white;
+  overflow: hidden; 
 }
 
 .header {
@@ -23,24 +24,41 @@
   grid-column: 1 / span 2 ;
   grid-row: 1/ span 1;
   display: grid;
-  grid-template: 1fr 3fr;
+  grid-template: 1fr 4fr;
+  align-items: center;
 }
 
 .logo{
-  grid-column: 1 span 1;
+  grid-column: 1 ;
+  grid-row: 1;
+  text-align: left;
 }
 
-.menu ul,
-.menu li {
-  font-size: 16px;
-  grid-column: 2/ span 1;
+.menu{
+  grid-column: 2 ;
+  text-align: center;
+}
+
+.menu ul{
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.menu li {
+  list-style: none;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  grid-column: span 1;
 }
 
 .sidebar {
   background-color: #C50208;
   grid-column: 1 / span 1;
-  grid-row:2/span 2;
+  grid-row:2/span 3;
+  display: grid;
+  gap: 50px;
+  grid-template: 1fr 1fr 1fr 1fr;
 }
 
 .sidebar .photo {
@@ -65,15 +83,27 @@
   grid-row: 2/ span 1;
 }
 
-.nav ul li {
+.nav ul{
+  display: grid;
   font-size: 16px;
   text-transform: uppercase;
+  grid-template-columns: 1fr 1fr 1fr ;
+  align-items: center;
+}
+
+.nav >ul>li{
+  list-style: none;
 }
 
 .article {
   background-color: #bccbde;
   grid-column: 2/ span 1;
-  grid-row: 2/span 2;
+  grid-row: 3/span 2;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr))
+
+
 }
 
 .article p {
